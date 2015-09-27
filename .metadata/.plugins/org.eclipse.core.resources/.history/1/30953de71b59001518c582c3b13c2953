@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="Surname">Alphabetical</option>
+      </select>
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="customers">
+        <li ng-repeat="customer in customers | filter:query | orderBy:orderProp"
+            class="thumbnail customer-listing">
+          <a href="#/customers/{{customer.id}}">{{customer.surname}}</a>
+          <p>{{customer.snippet}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+'use strict';
+
+angular.module('marykirkApp.customer', ['ngRoute'])
+
+.controller('CustomerCtrl', ['$scope', '$routeParams', '$location', 'customerFactory',
+                                  function($scope, $routeParams, $location, customerFactory) {
+	$scope.currentCustomer = $routeParams.customerRec;
+	
+	
+	$scope.getCust = function(){
+		customerFactory.getCustomer($scope.currentCustomer)
+				.then(function(data) {
+					$scope.customer = data[0];
+				}, function(data) {
+					alert(data);
+				})
+	};
+	
+	$scope.cancelEdit = function() {
+		$location.path('#/customers/');
+	}
+	
+	$scope.saveUpdate = function() {
+		customerFactory.saveUpdate($scope.customer)
+			.then(function(data) {
+			
+		})
+	};
+	
+	$scope.getCust();
+	
+}]);

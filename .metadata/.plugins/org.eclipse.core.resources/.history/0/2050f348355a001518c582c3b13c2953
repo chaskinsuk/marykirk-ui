@@ -1,0 +1,110 @@
+TBD: detail view for
+<span>{{customer.Surname}}</span>
+
+<div class="container">
+	<form role="form" class="form-horizontal">
+
+		<div class="form-group">
+			<label class="control-label">ID: {{customer.id}}</label>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="title">Title:</label> 
+			<input type="text" class="form-control" id="title" ng-model="customer.Title" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="firstName">First Name:</label>
+			<input type="text" class="form-control" id="firstName" ng-model="customer.FirstName" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="surname">Surname:</label> 
+			<input type="text" class="form-control" id="surname" ng-model="customer.Surname" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="companyName">Company Name:</label>
+			<input type="text" class="form-control" id="companyName" ng-model="customer.CompanyName" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="address1">Address 1:</label>
+			<input type="text" class="form-control" id="address1" ng-model="customer.Address1" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="address2">Address 2:</label>
+			<input type="text" class="form-control" id="address2" ng-model="customer.Address2" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="address3">Address 3:</label>
+			<input type="text" class="form-control" id="address3" ng-model="customer.Address3" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="town">Town:</label>
+			<input type="text" class="form-control" id="town" ng-model="customer.Town" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="region">Region:</label>
+			<input type="text" class="form-control" id="region" ng-model="customer.Region" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="country">Country:</label> 
+			<input type="text" class="form-control" id="country" ng-model="customer.Country" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="postcode">Postcode:</label>
+			<input type="text" class="form-control" id="postcode" ng-model="customer.Postcode" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="site">Site:</label> 
+			<input type="text" class="form-control" id="site" ng-model="customer.Site" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="primaryMobile">Primary Mobile:</label>
+			<input type="text" class="form-control" id="primaryMobile" ng-model="customer.PrimaryMobile" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="homePhone">Home Phone:</label> 
+			<input type="text" class="form-control" id="homePhone" ng-model="customer.HomePhone" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="status">Status:</label> 
+			<input type="text" class="form-control" id="status" ng-model="customer.Status" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="installedDate">Installed Date:</label>
+			<input type="text" class="form-control" id="installedDate" ng-model="customer.InstalledDate" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="contactedDate">Contacted Date:</label>
+			<input type="text" class="form-control" id="contactedDate" ng-model="customer.ContactedDate" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label" for="cancelledDate">Cancelled Date:</label>
+			<input type="text" class="form-control" id="cancelledDate" ng-model="customer.CancelledDate" />
+		</div>
+
+		<div class="form-group">
+			<label class="control-label">Equipment:</label>
+			<div ng-repeat="item in customer.Equipment">
+				<td>{{item.reference}}</td>
+
+			</div>
+		</div>
+	</form>
+
+</div>

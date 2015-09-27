@@ -1,0 +1,17 @@
+'use strict';
+
+angular.module('marykirkApp.customers', ['ngRoute'])
+
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/customers', {
+    templateUrl: 'customers/customer-list.html',
+    controller: 'CustomersCtrl'
+  });
+}])
+
+.controller('CustomersCtrl', ['$scope', '$location', 'customersFactory',
+	function($scope, $location, customersFactory) {
+	    //$scope.customers = $location.search();
+	    $scope.customers = customersFactory.search();
+	    $scope.orderProp = 'Surname';
+}]);

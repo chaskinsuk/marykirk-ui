@@ -1,0 +1,29 @@
+'use strict';
+
+angular.module('marykirkApp.customers', ['ngRoute'])
+
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/customers', {
+    templateUrl: 'customers/customer-list.html',
+    controller: 'CustomersCtrl'
+  });
+}])
+
+.controller('CustomersCtrl', ['$scope', '$http', '$location', 'customersFactory',
+	function($scope, $http, $location, customersFactory) {
+	    //$scope.customers = $location.search();
+//	    $http.get('/marykirk.properties').then(function (response) {
+//	    	$scope.elasticsearchHost = response.data.elasticsearchHost;
+//	        console.log('elasticsearchHost is ', response.data.elasticsearchHost);
+//        });
+	
+	
+//	    $scope.customers = customersFactory.search('buchan');
+		$scope.searchMe = function(){
+			customersFactory.search('buchan')
+					.then(function(data)) {
+						
+					}
+		}
+	    $scope.orderProp = 'Surname';
+}]);

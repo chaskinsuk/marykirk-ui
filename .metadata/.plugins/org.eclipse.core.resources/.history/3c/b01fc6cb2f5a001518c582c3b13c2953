@@ -1,0 +1,50 @@
+TBD: detail view for <span>{{customer.Surname}}</span>
+
+<div>
+	<form>
+		<label>ID: {{customer.id}}</label>
+		Title:
+		<input type="text" ng-model="customer.Title"	/>
+		First Name:
+		<input type="text" ng-model="customer.FirstName"	/>
+		Surname:
+		<input type="text" ng-model="customer.Surname"	/>
+		Company Name:
+		<input type="text" ng-model="customer.CompanyName"	/>
+		Address 1:
+		<input type="text" ng-model="customer.Address1"	/>
+		Address 2:
+		<input type="text" ng-model="customer.Address2"	/>
+		Address 3:
+		<input type="text" ng-model="customer.Address3"	/>
+		Town:
+		<input type="text" ng-model="customer.Town"	/>
+		Region:
+		<input type="text" ng-model="customer.Region"	/>
+		Country:
+		<input type="text" ng-model="customer.Country"	/>
+		Postcode:
+		<input type="text" ng-model="customer.Postcode"	/>
+		Site:
+		<input type="text" ng-model="customer.Site"	/>
+		Primary Mobile:
+		<input type="text" ng-model="customer.PrimaryMobile"	/>
+		Home Phone:
+		<input type="text" ng-model="customer.HomePhone"	/>
+		Status:
+		<input type="text" ng-model="customer.Status"	/>
+		Installed Date:
+		<input type="text" ng-model="customer.InstalledDate"	/>
+		Contacted Date:
+		<input type="text" ng-model="customer.ContactedDate"	/>
+		Cancelled Date:
+		<input type="text" ng-model="customer.CancelledDate"	/>
+		
+		Equipment:
+		<div ng-repeat="item in Equipment">
+				<td>{{item.reference}}</td>
+
+		</div>
+	</form>
+
+</div>

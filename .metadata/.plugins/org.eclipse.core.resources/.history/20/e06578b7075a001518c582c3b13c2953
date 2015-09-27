@@ -1,0 +1,16 @@
+'use strict';
+
+angular.module('marykirkApp.customer', ['ngRoute'])
+
+.controller('CustomerCtrl', ['$scope', '$routeParams',
+                                  function($scope, $routeParams) {
+	$scope.customerId = $routeParams.customerId;
+//  $scope.customer = Customer.get({phoneId: $routeParams.phoneId}, function(phone) {
+//    $scope.mainImageUrl = phone.images[0];
+//  });
+//
+//  $scope.setImage = function(imageUrl) {
+//    $scope.mainImageUrl = imageUrl;
+//  };function() {
+
+}]);

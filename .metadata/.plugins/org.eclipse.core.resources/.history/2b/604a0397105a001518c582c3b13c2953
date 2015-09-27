@@ -1,0 +1,18 @@
+'use strict';
+
+angular.module('marykirkApp.customer', ['ngRoute'])
+
+.controller('CustomerCtrl', ['$scope', '$routeParams',
+                                  function($scope, $routeParams) {
+	$scope.currentCustomer = $routeParams.customerRec;
+	
+	$scope.searchMe = function(){
+		customerFactory.getCustomer($scope.currentCustomer)
+				.then(function(data) {
+					$scope.customers = data;
+				}, function(data) {
+					alert(data);
+				})
+	}
+	
+}]);
